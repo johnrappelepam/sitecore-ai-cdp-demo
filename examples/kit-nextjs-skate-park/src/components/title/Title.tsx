@@ -16,7 +16,8 @@ export const Default = ({ params, fields, page }: TitleProps): JSX.Element => {
   const { styles, RenderingIdentifier: id } = params;
   const datasource = getDatasource(fields);
   const datasourceField = getFieldValue(datasource?.field) as TextField | undefined;
-  const contextField: TextField = page?.layout?.sitecore?.route?.fields?.Title as TextField;
+  
+  const contextField: TextField = page?.layout?.sitecore?.route?.fields?.pageTitle as TextField;
   const titleField: TextField = datasourceField || contextField;
 
   const link: LinkField = {
