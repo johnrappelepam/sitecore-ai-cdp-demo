@@ -6,6 +6,7 @@ import { BYOCClientWrapper, FEaaSClientWrapper } from '@sitecore-content-sdk/nex
 import { Form } from '@sitecore-content-sdk/nextjs';
 
 // end of built-in import section
+import * as TaxonomyTracker from 'src/components/taxonomy-tracker/TaxonomyTracker';
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 
@@ -13,6 +14,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['BYOCWrapper', BYOCClientWrapper],
   ['FEaaSWrapper', FEaaSClientWrapper],
   ['Form', Form],
+  ['TaxonomyTracker', { ...TaxonomyTracker }],
   ['Navigation', { ...Navigation }],
   ['ContentBlock', { ...ContentBlock }],
 ]);

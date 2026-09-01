@@ -12,6 +12,7 @@ import {
 import StructuredData from "src/components/structured-data/StructuredData";
 import type { JsonLdValue } from "src/lib/structured-data/jsonld";
 import { getBaseUrl } from "src/lib/utils";
+import TaxonomyTracker from "components/taxonomy-tracker/TaxonomyTracker";
 
 interface LayoutProps {
   page: Page;
@@ -108,6 +109,7 @@ const Layout = ({ page, baseUrl: baseUrlProp }: LayoutProps): JSX.Element => {
                 )}
               </div>
             </footer>
+            <TaxonomyTracker page={page} />
           </>
         )}
       </div>
