@@ -107,7 +107,7 @@ export const generateMetadata = async ({ params }: PageProps) => {
     : [];
 
   return {
-    title: fields?.Title?.value?.toString() || "Page",
+    title: fields?.metadataTitle?.value?.toString() || "Page",
     description:
       fields?.ogDescription?.value?.toString() ||
       fields?.metadataDescription?.value?.toString() ||
