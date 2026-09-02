@@ -3,7 +3,6 @@ import {
   defineProxy,
   PreviewProxy,
   AppRouterMultisiteProxy,
-  PersonalizeProxy,
   RedirectsProxy,
   LocaleProxy,
 } from '@sitecore-content-sdk/nextjs/proxy';
@@ -11,6 +10,7 @@ import sites from '.sitecore/sites.json';
 import scConfig from 'sitecore.config';
 import { routing } from './i18n/routing';
 import client from './lib/sitecore-client';
+import { DemoPersonalizeProxy } from 'src/lib/DemoPersonalizeProxy';
 
 const preview = new PreviewProxy({
     client,
@@ -61,7 +61,7 @@ const redirects = new RedirectsProxy({
   skip: () => false,
 });
 
-const personalize = new PersonalizeProxy({
+const personalize = new DemoPersonalizeProxy({
   /**
    * List of sites for site resolver to work with
    */
@@ -74,7 +74,8 @@ const personalize = new PersonalizeProxy({
   // This is an important performance consideration since Next.js Edge middleware runs on every request.
   skip: () => false,
 });
-
+console.log('personalize');
+console.dir(personalize, { depth: null });
 export default function proxy(req: NextRequest) {
   return defineProxy(preview, locale, multisite, redirects, personalize).exec(req);
 }
