@@ -28,13 +28,10 @@ export default function TaxonomyTracker({ page }: TaxonomyTrackerProps) {
     lastTracked.current = routeKey;
 
     const eventData: any = {
-      type: 'TAXONOMY_VIEWED', // adjust prefix/name to your site
+      type: 'Page_Taxonomy_Viewed', // this is the event name
       channel: 'WEB',
       language: 'EN',
-      page: route?.name ?? 'unknown',
-      extensionData: {
-        Taxonomy: taxContentType.id, 
-      },
+      page: taxContentType.id, // this is the event value
     };
 
     event(eventData);
