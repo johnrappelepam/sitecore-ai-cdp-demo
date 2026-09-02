@@ -12,9 +12,14 @@ import type { PersonalizeInfo } from '@sitecore-content-sdk/content/personalize'
  */
 // Map by the base (wildcard-stripped) key so minor language/suffix variations still hit
 const FRIENDLY_ID_OVERRIDES: Record<string, string> = {
-  'component_cdpdemo_8d8273b4a59646a3b54354c726e67c04_bbe1894850c6441dac350f0fc7741cc6_en':
-    'component_cdpdemo_8d8273b4a59646a3b54354c726e67c04_bbe1894850c6441dac350f0fc7741cc6_en_20260902t153019869z',
+  'component_8d8273b4a59646a3b54354c726e67c04_bbe1894850c6441dac350f0fc7741cc6_en':
+    'component_8d8273b4a59646a3b54354c726e67c04_bbe1894850c6441dac350f0fc7741cc6_en_20260902t153019869z',
+
+    'component_8d8273b4a59646a3b54354c726e67c04_8eb68fc6db344abca99b0e0a45c28ac6_en*':
+    'component_8d8273b4a59646a3b54354c726e67c04_8eb68fc6db344abca99b0e0a45c28ac6_en_20260902t192235103z',
 };
+
+
 
 function resolveFriendlyId(friendlyId: string): string {
   // strip a trailing wildcard if present
