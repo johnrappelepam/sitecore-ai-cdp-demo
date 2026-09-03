@@ -32,6 +32,8 @@ export default function IdentifierTextBox(): JSX.Element {
       const identityData: any = {
         channel: 'WEB',
         language: 'EN',
+        firstName: 'John',
+        lastName: 'Doe',
         identifiers: [
           {
             provider: 'email',
