@@ -17,6 +17,7 @@ import * as PageContent from 'src/components/page-content/PageContent';
 import * as Navigation from 'src/components/navigation/Navigation';
 import * as LinkList from 'src/components/link-list/LinkList';
 import * as Image from 'src/components/image/Image';
+import * as IdentifierTextBox from 'src/components/identifier-text-box/IdentifierTextBox';
 import * as ContentTypeListing from 'src/components/content-listing/ContentTypeListing';
 import * as ContentBlock from 'src/components/content-block/ContentBlock';
 import * as Container from 'src/components/container/Container';
@@ -37,6 +38,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['Navigation', { ...Navigation, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['Image', { ...Image }],
+  ['IdentifierTextBox', { ...IdentifierTextBox, componentType: 'client' }],
   ['ContentTypeListing', { ...ContentTypeListing }],
   ['ContentBlock', { ...ContentBlock, componentType: 'client' }],
   ['Container', { ...Container }],

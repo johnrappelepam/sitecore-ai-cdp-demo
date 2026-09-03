@@ -3,7 +3,6 @@
 
 import { useEffect, useRef } from 'react';
 import { event } from '@sitecore-content-sdk/events';
-import { onSdkReady } from '../../Bootstrap'; // adjust path
 
 type TaxonomyTrackerProps = {
   page: any; // replace with your typed layout data
