@@ -58,6 +58,12 @@ export default function IdentifierTextBox(): JSX.Element {
 
   return (
     <section className="identifier-text-box">
+      <p>
+        <b>Identity Event</b>
+      </p>
+      <p>
+        Enter your email and click "Identify Me" and it will trigger the "Identity" event in Sitecore AI. This converts you from an anonymous visitor into a known customer. Any events associated with this session are then automatically merged and applied to your known profile.
+        </p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="identifier-email">Email</label>
         <input
