@@ -636,3 +636,98 @@ h5, h6 { font-size: 1rem; }  /* 16px */
 .link-list > .component-content li a:before{
     display: none;
 }
+
+/* --------------------------------------------------------------------------
+   MICROSITE EMBED component
+   -------------------------------------------------------------------------- */
+
+/* --- Editing: reference table --- */
+.component.microsite-embed .microsite-embed__heading {
+  margin-bottom: 12px;
+}
+
+.component.microsite-embed .microsite-embed__savebox {
+  margin-bottom: 16px;
+}
+
+.component.microsite-embed .microsite-embed__save-instructions {
+  font-size: 0.9rem;
+  color: var(--brand-font-color);
+  opacity: 0.75;
+  margin-bottom: 8px;
+}
+
+.component.microsite-embed .microsite-embed__field-label {
+  font-weight: 700;
+}
+
+.component.microsite-embed .microsite-embed__field code,
+.component.microsite-embed .microsite-embed__folder {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background-color: #f4f4f7;
+  border: 1px solid var(--brand-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.9rem;
+  color: var(--brand-font-color);
+}
+
+.component.microsite-embed .microsite-embed__reference-title {
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin: 4px 0 8px;
+}
+
+/* Scrollable, height-capped table */
+.component.microsite-embed .microsite-embed__table-scroll {
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid var(--brand-border);
+  border-radius: var(--brand-radius);
+  background-color: #ffffff;
+}
+
+.component.microsite-embed .microsite-embed__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.component.microsite-embed .microsite-embed__table th {
+  position: sticky;
+  top: 0;
+  background-color: #f4f4f7;
+  text-align: left;
+  padding: 8px 12px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--brand-border);
+  z-index: 1;
+}
+
+.component.microsite-embed .microsite-embed__table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--brand-border);
+}
+
+.component.microsite-embed .microsite-embed__table tr:last-child td {
+  border-bottom: none;
+}
+
+.component.microsite-embed .microsite-embed__table tr.is-current {
+  background-color: rgba(137, 198, 204, 0.18);
+}
+
+/* Preview */
+.component.microsite-embed .microsite-embed__preview-frame {
+  margin-top: 16px;
+}
+
+.component.microsite-embed .microsite-embed__preview-label {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  word-break: break-all;
+  margin-bottom: 6px;
+}

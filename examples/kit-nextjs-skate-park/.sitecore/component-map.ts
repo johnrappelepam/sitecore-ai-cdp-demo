@@ -37,7 +37,7 @@ export const componentMap = new Map<string, NextjsContentSdkComponent>([
   ['PartialDesignDynamicPlaceholder', { ...PartialDesignDynamicPlaceholder }],
   ['PageContent', { ...PageContent }],
   ['Navigation', { ...Navigation, componentType: 'client' }],
-  ['MicrositeEmbed', { ...MicrositeEmbed }],
+  ['MicrositeEmbed', { ...MicrositeEmbed, componentType: 'client' }],
   ['LinkList', { ...LinkList }],
   ['Image', { ...Image }],
   ['IdentifierTextBox', { ...IdentifierTextBox, componentType: 'client' }],
