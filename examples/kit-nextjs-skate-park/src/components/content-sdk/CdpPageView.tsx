@@ -45,12 +45,18 @@ const CdpPageView = (): JSX.Element => {
       scope
     );
     // there can be cases where Events are not initialized which are expected to reject
+
+    const extensionData = {
+      customKey: "customValue"
+    };
+    console.log('Sending page view event with data:');
     pageView({
       channel: 'WEB',
       currency: 'USD',
       page: route.name,
       pageVariantId,
       language,
+      extensionData,
     }).catch((e) => console.debug(e));
   }, [mode, route, context.variantId, siteName]);
 
