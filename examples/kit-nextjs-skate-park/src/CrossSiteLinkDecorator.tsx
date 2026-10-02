@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 import { onSdkReady } from './Bootstrap';
 
 const TARGET_ORIGIN = 'https://secondary-cdp-site.vercel.app';
-const COOKIE_NAME = 'sc_id';
-const PARAM = 'sc_id';
+const COOKIE_NAME = 'sc_cid';
+const PARAM = 'sc_cid';
 const SELECTOR = `a[href^="${TARGET_ORIGIN}"]`;
 
 function readCookie(name: string): string | null {
