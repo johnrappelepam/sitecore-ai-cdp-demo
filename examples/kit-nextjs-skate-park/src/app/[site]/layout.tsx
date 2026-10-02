@@ -1,5 +1,6 @@
 import { draftMode } from 'next/headers';
 import Bootstrap from 'src/Bootstrap';
+import CrossSiteLinkDecorator from 'src/CrossSiteLinkDecorator';
 
 export default async function SiteLayout({
   children,
@@ -14,6 +15,7 @@ export default async function SiteLayout({
   return (
     <>
       <Bootstrap siteName={site} isPreviewMode={isEnabled} />
+      <CrossSiteLinkDecorator />
       {children}
     </>
   );
