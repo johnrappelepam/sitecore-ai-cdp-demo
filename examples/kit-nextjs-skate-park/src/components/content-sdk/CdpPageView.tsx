@@ -60,8 +60,8 @@ const CdpPageView = (): JSX.Element => {
         ],
         anatomyArea: "torso"
       },
-      pageData_category_value: "yellow",
-      pageData_anatomies: "hip, shoulder, knee, elbow",
+      pageData2_category2_value2: "yellow",
+      pageData2_anatomies2: "hip, shoulder, knee, elbow",
       userData: {
         "firstName": "john"
       }
