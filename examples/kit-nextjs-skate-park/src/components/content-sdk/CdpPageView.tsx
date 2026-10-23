@@ -48,20 +48,55 @@ const CdpPageView = (): JSX.Element => {
 
     const extensionData = {
       pageData: {
+        // bad, nested object, will not be flattened
         "category": {
           value: "green"
         },
+        // good, flattened to pageData_category_value
         "category_value": "blue",
+        
+        "boolCheck": true,
+        "intCheck": 42,
+        "arrayOfObjects": [
+          {
+            "name": "item1",
+            "value": "running"
+          },
+          {
+            "name": "item2",
+            "value": "walking"
+          }
+        ],
+        "nullField": null,
+
+        // good, flattened to pageData_anatomies
         anatomies: [
           "hip",
           "shoulder",
           "knee",
           "elbow"
         ],
-        anatomyArea: "torso"
+        // good, flattened to pageData_anatomyArea
+        anatomyArea: "torso",
+        // deep-nesting checks
+        "category3": {
+          "anotherProp": {
+            "value": "red",
+            "anotherValue": "orange",
+            "anArray": [
+              "hip",
+              "shoulder",
+              "knee",
+              "elbow"
+            ]
+          }
+        },
       },
+      // good, left as-is
       pageData2_category2_value2: "yellow",
+      // good, left as-is
       pageData2_anatomies2: "hip, shoulder, knee, elbow",
+      // good, flattened to userData_firstName
       userData: {
         "firstName": "john"
       }
