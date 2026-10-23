@@ -65,9 +65,9 @@ const CdpPageView = (): JSX.Element => {
           {
             "name": "item2",
             "value": "walking"
-          }
+          },
         ],
-        "nullField": null,
+        
 
         // good, flattened to pageData_anatomies
         anatomies: [
@@ -88,8 +88,8 @@ const CdpPageView = (): JSX.Element => {
               "shoulder",
               "knee",
               "elbow"
-            ]
-          }
+            ],
+          },
         },
       },
       // good, left as-is
@@ -99,7 +99,7 @@ const CdpPageView = (): JSX.Element => {
       // good, flattened to userData_firstName
       userData: {
         "firstName": "john"
-      }
+      },
     };
     console.log('Sending page view event with data:');
     pageView({
