@@ -47,7 +47,24 @@ const CdpPageView = (): JSX.Element => {
     // there can be cases where Events are not initialized which are expected to reject
 
     const extensionData = {
-      customKey: "customValue"
+      pageData: {
+        "category": {
+          value: "green"
+        },
+        "category_value": "blue",
+        anatomies: [
+          "hip",
+          "shoulder",
+          "knee",
+          "elbow"
+        ],
+        anatomyArea: "torso"
+      },
+      pageData_category_value: "yellow",
+      pageData_anatomies: "hip, shoulder, knee, elbow",
+      userData: {
+        "firstName": "john"
+      }
     };
     console.log('Sending page view event with data:');
     pageView({
